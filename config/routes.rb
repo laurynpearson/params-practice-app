@@ -3,7 +3,13 @@ Rails.application.routes.draw do
   # get "/photos" => "photos#index"
 
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
-  # namespace :api do
+  namespace :api do
   #   get "/photos" => "photos#index"
-  # end
+
+  #segment parameter
+  get '/home/:wildcard' => 'params#index'
+
+  #body parameter
+  post '/home_body/' => 'params#index'
+  end
 end
